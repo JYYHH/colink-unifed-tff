@@ -15,7 +15,7 @@ UNIFED_TASK_DIR = "unifed:task"
 def load_config_from_param_and_check(param: bytes):
     unifed_config = json.loads(param.decode())
     framework = unifed_config["framework"]
-    assert framework == "example"
+    assert framework == "tff"
     deployment = unifed_config["deployment"]
     if deployment["mode"] != "colink":
         raise ValueError("Deployment mode must be colink")

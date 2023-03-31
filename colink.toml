@@ -1,18 +1,21 @@
 [package]
-name = "unifed-example"
+name = "unifed-tff"
 version = "0.0.0"
 keywords = ["federated learning", "machine learning"]
-description = "Example UniFed protocol."
+description = "tff is TensorFlow Federated for short, it's based on TensorFlow."
 language = "python"
+
+
 install_script = """
-if { conda env list | grep 'colink-protocol-unifed-example'; } >/dev/null 2>&1; then
-    conda env remove -n colink-protocol-unifed-example
+if { conda env list | grep 'colink-protocol-unifed-tff'; } >/dev/null 2>&1; then
+    conda env remove -n colink-protocol-unifed-tff
 fi
-conda create -n colink-protocol-unifed-example python=3.9 -y
-conda activate colink-protocol-unifed-example
+conda create -n colink-protocol-unifed-tff python=3.9 -y
+conda activate colink-protocol-unifed-tff
 pip install .
 """
+
 entrypoint = """
-conda activate colink-protocol-unifed-example
-unifed-example
+conda activate colink-protocol-unifed-tff
+unifed-tff
 """
