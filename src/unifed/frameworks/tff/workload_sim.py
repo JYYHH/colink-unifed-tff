@@ -55,7 +55,7 @@ def simulate_logging(participant_id, role, Config):
 
         # first download
         
-        flbd = flbenchmark.datasets.FLBDatasets('../data')
+        flbd = flbenchmark.datasets.FLBDatasets('~/flbenchmark.working/data')
         print("Downloading Data...")
         dataset_name = (
                         'student_horizontal',
@@ -138,8 +138,8 @@ def simulate_logging(participant_id, role, Config):
 
         NUM_CLIENTS = config["training"]["client_per_round"]
         print('number of client per round = ',NUM_CLIENTS)
-        # NUM_EPOCHS = config["training"]["inner_step"]
-        NUM_EPOCHS = 1
+        NUM_EPOCHS = config["training"]["local_epochs"]
+        # NUM_EPOCHS = 1
         BATCH_SIZE = config["training"]["batch_size"]
 
         print('Used dataset is ' + dataset_name[dataset_switch])
@@ -357,7 +357,7 @@ def simulate_logging(participant_id, role, Config):
         print("Initializing...........")
         environment = set_sizing_environment()
         state = iterative_process.initialize()
-        NUM_ROUNDS = config["training"]["epochs"]
+        NUM_ROUNDS = config["training"]["global_epochs"]
         print("TOTAL Training round is {}".format(NUM_ROUNDS))
         if config["model"] == "logistic_regression":
             my_keras_model = lr(
