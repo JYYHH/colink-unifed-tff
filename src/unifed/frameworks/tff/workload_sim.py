@@ -54,8 +54,8 @@ def simulate_logging(participant_id, role, Config):
         config = json.loads(Config)
 
         # first download
-        
-        flbd = flbenchmark.datasets.FLBDatasets('~/flbenchmark.working/data')
+        user_path = os.path.expanduser('~')
+        flbd = flbenchmark.datasets.FLBDatasets(user_path + '/flbenchmark.working/data')
         print("Downloading Data...")
         dataset_name = (
                         'student_horizontal',
@@ -113,18 +113,18 @@ def simulate_logging(participant_id, role, Config):
                     '../csv_data/give_credit_horizontal_train/give_credit_homo_',
                     '../csv_data/student_horizontal_train/student_homo_',
                     '../csv_data/vehicle_scale_horizontal_train/vehicle_scale_homo_',
-                    '~/flbenchmark.working/data/femnist/train/',
-                    '~/flbenchmark.working/data/reddit/train/',
-                    '~/flbenchmark.working/data/celeba/train/'
+                    user_path + '/flbenchmark.working/data/femnist/train/',
+                    user_path + '/flbenchmark.working/data/reddit/train/',
+                    user_path + '/flbenchmark.working/data/celeba/train/'
                         ]
         test_path = ['../csv_data/breast_horizontal_test/breast_homo_',
                     '../csv_data/default_credit_horizontal_test/default_credit_homo_',
                     '../csv_data/give_credit_horizontal_test/give_credit_homo_',
                     '../csv_data/student_horizontal_test/student_homo_',
                     '',
-                    '~/flbenchmark.working/data/femnist/test/',
-                    '~/flbenchmark.working/data/reddit/test',
-                    '~/flbenchmark.working/data/celeba/test'
+                    user_path + '/flbenchmark.working/data/femnist/test/',
+                    user_path + '/flbenchmark.working/data/reddit/test',
+                    user_path + '/flbenchmark.working/data/celeba/test'
                         ]
 
         # config
