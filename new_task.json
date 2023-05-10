@@ -1,0 +1,38 @@
+{
+  "framework": "tff",
+  "algorithm": "fedavg",
+  "training": {
+    "global_epochs": 3,
+    "local_epochs": 1,
+    "batch_size": 32,
+    "learning_rate": 0.01,
+    "client_per_round": 2,
+    "loss_func": "cross_entropy",
+    "optimizer": "sgd",
+    "optimizer_param": {
+      "momentum": 0.9,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false
+    }
+  },
+  "dataset": "femnist",
+  "model": "mlp_128",
+  "deployment": {
+    "mode": "colink",
+    "participants": [
+      {
+        "user_id": "039e4096090cd8a97adbdcb6ea8b98b2296c8296a4140cbc3e18008fc1e2144e03",
+        "role": "server"
+      },
+      {
+        "user_id": "03a339ab7146a4f0542e84e4210fd09966fb3bde16440697377d12675bdfd0eff7",
+        "role": "client"
+      },
+      {
+        "user_id": "02ecc83fc4b829868a54e790d25ea850b4ed74913e53721fe799612dcdaf0ebf83",
+        "role": "client"
+      }
+    ]
+  }
+}

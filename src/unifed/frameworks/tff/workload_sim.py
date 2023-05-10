@@ -113,18 +113,18 @@ def simulate_logging(participant_id, role, Config):
                     '../csv_data/give_credit_horizontal_train/give_credit_homo_',
                     '../csv_data/student_horizontal_train/student_homo_',
                     '../csv_data/vehicle_scale_horizontal_train/vehicle_scale_homo_',
-                    '../data/femnist/train/',
-                    '../data/reddit/train/',
-                    '../data/celeba/train/'
+                    '~/flbenchmark.working/data/femnist/train/',
+                    '~/flbenchmark.working/data/reddit/train/',
+                    '~/flbenchmark.working/data/celeba/train/'
                         ]
         test_path = ['../csv_data/breast_horizontal_test/breast_homo_',
                     '../csv_data/default_credit_horizontal_test/default_credit_homo_',
                     '../csv_data/give_credit_horizontal_test/give_credit_homo_',
                     '../csv_data/student_horizontal_test/student_homo_',
                     '',
-                    '../data/femnist/test/',
-                    '../data/reddit/test',
-                    '../data/celeba/test'
+                    '~/flbenchmark.working/data/femnist/test/',
+                    '~/flbenchmark.working/data/reddit/test',
+                    '~/flbenchmark.working/data/celeba/test'
                         ]
 
         # config
